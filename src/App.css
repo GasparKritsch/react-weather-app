@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(34,34,34,0.6),rgba(34,34,34,0.6)),url(./img/background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchBarContainer{
+  height: 20vh;
+  padding-top: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBarContainer input{
+  width: 300px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background-color: rgba(175, 175, 175,0.4);
+}
+
+::placeholder{
+  color: white;
+}
+
+.infoContainer{
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.infoContainer h3{
+  font-size: 30px;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.infoContainer hr{
+  width: 80%;
+  margin: 30px 0;
+}
+
+.infoContainer div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer div h1{
+  font-size: 50px;
+  margin-right: 40px;
+}
+
+.infoContainer div h3{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.moreInfoContainer{
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.moreInfoContainer .divsContainer{
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(175, 175, 175,0.4);
+  border-radius: 60px;
+}
+
+.moreInfoContainer .divsContainer div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 33%;
+  padding: 20px 0;
+}
+
+@media screen and (max-width:644px){
+
+  .infoContainer div h3{
+    font-size: 25px;
   }
-  to {
-    transform: rotate(360deg);
+  .moreInfoContainer .divsContainer{
+    width: 350px;
+    margin-bottom: 150px;
+  }
+  .infoContainer div .cityName{
+    font-size: 25px;
+  }
+  .infoContainer div .temperature{
+    font-size: 35px;
+  }
+  .infoContainer div .weather{
+    font-size: 25px;
   }
 }
